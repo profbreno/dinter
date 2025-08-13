@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação: Conceitos de Tecnologia segundo Vieira Pinto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            min-height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+        }
+        .slide.active {
+            opacity: 1;
+            z-index: 10;
+            visibility: visible;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin: 1rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            max-width: 950px;
+            width: 90%;
+        }
+        .question-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .nav-button {
+            position: fixed;
+            bottom: 2rem;
+            z-index: 20;
+            background-color: #1e40af; /* blue-800 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            background-color: #1d4ed8; /* blue-700 */
+            transform: translateY(-2px);
+        }
+        #prevBtn {
+            left: 2rem;
+        }
+        #nextBtn {
+            right: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-blue-200 text-gray-800">
+
+    <!-- Slide 0: Título -->
+    <div id="slide-0" class="slide active">
+        <div class="text-center p-6">
+            <img src="https://placehold.co/150x150/e0e7ff/3730a3?text=AVP" alt="Foto de Álvaro Vieira Pinto" class="mx-auto rounded-full mb-6 shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/150x150/e0e7ff/3730a3?text=Autor';">
+            <h1 class="text-5xl md:text-7xl font-bold text-blue-900" style="font-family: 'Montserrat', sans-serif;">Conceitos de Tecnologia</h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-600">Uma análise baseada no pensamento de Álvaro Vieira Pinto</p>
+            <p class="mt-8 text-lg text-gray-500">Alunos: Anna Wannessa, Breno Araújo, Leonardo Campello, Leopoldina Amorim, Rodrigo Silva</p>
+        </div>
+    </div>
+
+    <!-- Slide 1: Tecnologia como sinônimo de técnica -->
+    <div id="slide-1" class="slide">
+        <div class="card">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl md:text-3xl text-blue-800 question-title mb-6">1. O que significa considerar tecnologia como sinônimo de técnica e quais os riscos dessa equivalência?</h2>
+                    <div class="text-lg space-y-4 text-gray-700">
+                        <p>É a forma mais comum de usar a palavra, sem preocupação com a precisão conceitual.</p>
+                        <p class="font-bold text-red-700">Riscos:</p>
+                        <ul class="list-disc list-inside space-y-2 pl-4">
+                            <li><strong>Enganos Filosóficos:</strong> Leva a julgamentos equivocados sobre o papel da tecnologia.</li>
+                            <li><strong>Manipulação Política:</strong> A falta de clareza serve a interesses que usam o termo de forma "oca" para confundir.</li>
+                            <li><strong>Nocividade Social:</strong> Impede uma compreensão crítica do fenômeno tecnológico.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC7eVTKkZO4J_BcDs0Olu5FZw4kTDg2jr5jA&s" alt="Ilustração de um sinal de perigo" class="rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fee2e2/b91c1c?text=Erro';">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Duas interpretações -->
+    <div id="slide-2" class="slide">
+        <div class="card">
+            <h2 class="text-2xl md:text-3xl text-blue-800 question-title mb-6 text-center">2. No conceito de tecnologia como “conjunto de todas as técnicas”, quais são as duas interpretações?</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-lg mt-6">
+                <div class="bg-blue-50 p-6 rounded-xl shadow-sm text-center">
+                    <img src="https://placehold.co/600x400/dbeafe/1e3a8a?text=Modelo+Único" alt="Imagem de um arranha-céu dominante" class="rounded-lg mb-4 mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/dbeafe/1e3a8a?text=1';">
+                    <h3 class="font-bold text-xl text-blue-700 mb-3">Interpretação 1: Modelo Único</h3>
+                    <p>Toma-se a tecnologia dos países desenvolvidos como o <strong class="text-blue-900">único modelo válido</strong>, um padrão a ser imitado por todos.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-xl shadow-sm text-center">
+                    <img src="https://placehold.co/600x400/dcfce7/14532d?text=Diversidade" alt="Imagem de diversas ferramentas e artesanatos" class="rounded-lg mb-4 mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/dcfce7/14532d?text=2';">
+                    <h3 class="font-bold text-xl text-green-700 mb-3">Interpretação 2: Diversidade de Projetos</h3>
+                    <p>Reconhece a <strong class="text-green-900">multiplicidade de concepções</strong> e projetos tecnológicos, respeitando os diferentes contextos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Problemas da imitação -->
+    <div id="slide-3" class="slide">
+        <div class="card">
+             <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl md:text-3xl text-blue-800 question-title mb-6">3. Quais problemas podem surgir quando sociedades “não tecnológicas” tentam imitar o modelo tecnológico de regiões mais desenvolvidas?</h2>
+                    <div class="text-lg space-y-4 text-gray-700">
+                        <p>A imitação acarreta problemas graves:</p>
+                        <ul class="list-disc list-inside space-y-3 pl-4">
+                            <li><strong>Esquecimento da Realidade Local:</strong> <strong class="text-red-700">Ignora as próprias condições objetivas</strong>.</li>
+                            <li><strong>Priorização do Lucro:</strong> A transferência visa mais ao <strong class="text-red-700">lucro dos vendedores</strong> que às necessidades locais.</li>
+                            <li><strong>Inversão de Valores:</strong> A máquina se torna mais importante que o homem.</li>
+                            <li><strong>Negação do Saber Existente:</strong> Ignora as técnicas que as massas já possuem.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/3">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeJwkR1IsTKj9KF0LLBD7Z6hQGqe92EO-gA&s" alt="Ilustração de uma engrenagem quebrada" class="rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/fecaca/991b1b?text=Falha';">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Proposta de Vieira Pinto -->
+    <div id="slide-4" class="slide">
+        <div class="card">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl md:text-3xl text-blue-800 question-title mb-6">4. Qual é a proposta de Vieira Pinto para que a transferência de tecnologia realmente beneficie as pessoas?</h2>
+                    <div class="text-lg space-y-4 text-gray-700">
+                        <div class="bg-green-100 border-l-4 border-green-500 text-green-800 p-4 rounded-r-lg" role="alert">
+                            <p class="font-bold text-xl mb-2">O investimento deve ser no humano, e não na obra.</p>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 pl-4">
+                            <li><strong>Preparação Cultural e Econômica:</strong> Melhorar a distribuição de renda para um crescimento interno real.</li>
+                            <li><strong>Diálogo entre Tecnologias:</strong> A nova tecnologia deve se relacionar com a antiga, não apagá-la.</li>
+                            <li><strong>O Humano como Criador:</strong> Reforçar que é o ser humano que cria a tecnologia, e não o contrário.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/3">
+                     <img src="https://keeps.com.br/wp-content/uploads/2022/05/Capital-Humano_todo-mundo-ganha-02-1024x710.png" alt="Ilustração de pessoas colaborando" class="rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/bbf7d0/166534?text=Humano';">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Relação com ideologizações -->
+    <div id="slide-5" class="slide">
+        <div class="card">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl md:text-3xl text-blue-800 question-title mb-6">5. Como esse conceito se relaciona com as ideologizações da tecnologia?</h2>
+                    <div class="text-lg space-y-4 text-gray-700">
+                        <p>A ideia de um "modelo único" está ligada à <strong>ideologização da tecnologia</strong>, que a transforma em uma <strong>mitologia</strong> para servir a interesses específicos:</p>
+                        <ul class="list-disc list-inside space-y-3 pl-4">
+                            <li><strong>Justificativa de Dominação:</strong> Legitima o poder dos países centrais.</li>
+                            <li><strong>Criação de um Mito:</strong> Gera um fascínio acrítico ("embasbacamento").</li>
+                            <li><strong>Silenciamento Político:</strong> Abafa contestações e reforça a ordem social vigente.</li>
+                            <li><strong>Falsa Neutralidade:</strong> Esconde os <strong class="text-purple-700">interesses políticos e econômicos</strong> por trás da técnica.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/3">
+                    <img src="https://dialogando.com.br/wp-content/uploads/2023/08/GettyImages-1198086928.jpg" alt="Ilustração de uma pessoa adorando uma máquina" class="rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/e9d5ff/581c87?text=Ideologia';">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de Navegação -->
+    <button id="prevBtn" class="nav-button" onclick="changeSlide(-1)">Anterior</button>
+    <button id="nextBtn" class="nav-button" onclick="changeSlide(1)">Próximo</button>
+
+    <script>
+        // Lógica para controlar a apresentação de slides
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            updateNavButtons();
+        }
+
+        function changeSlide(direction) {
+            // Se estiver no último slide e clicar em "Início", volta para o slide 0
+            if (currentSlide === totalSlides - 1 && direction === 1) {
+                currentSlide = 0;
+            } else {
+                currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            }
+            showSlide(currentSlide);
+        }
+
+        function updateNavButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            if (currentSlide === 0) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'block';
+            }
+
+            if (currentSlide === totalSlides - 1) {
+                nextBtn.innerHTML = 'Início';
+            } else {
+                nextBtn.innerHTML = 'Próximo';
+            }
+        }
+        
+        // Inicializa a apresentação
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
