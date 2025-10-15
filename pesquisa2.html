@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 10: TÉCNICAS DE PESQUISA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Estilos para listas com sub-itens */
+        .list-sub {
+            padding-left: 2.5rem; /* Aumenta o recuo para sub-itens */
+        }
+        .list-sub li::before {
+            content: '◦';
+            position: absolute;
+            left: 1.25rem;
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
+
+    <div class="w-full max-w-7xl">
+        <!-- Cabeçalho da Apresentação -->
+        
+        <!-- Container do Slide -->
+        <main id="presentation-container" class="bg-white rounded-lg shadow-xl p-6 sm:p-8 md:p-12 min-h-[450px] md:min-h-[500px] flex flex-col justify-center relative overflow-hidden">
+            <!-- Os slides serão inseridos aqui -->
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="text-center">
+                    <p class="text-lg font-semibold text-indigo-600 mb-2">SLIDE 1</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">TÉCNICAS DE PESQUISA</h2>
+                    <p>A Entrevista como técnica privilegiada de comunicação.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 2</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">DEFINIÇÃO DE ENTREVISTA</h2>
+                <div class="flex flex-col md:flex-row items-center gap-6 mt-4">
+                    <div class="md:w-1/2">
+                        <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                            <li>Tomada no sentido amplo de comunicação verbal.</li>
+                            <li>No sentido restrito: técnica de coleta de informações sobre determinado tema científico.</li>
+                            <li>É uma conversa a dois ou entre vários interlocutores.</li>
+                            <li>Realizada por iniciativa do entrevistador, visando construir informações pertinentes para um objeto de pesquisa.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/400x300/e2e8f0/4a5568?text=Imagem+de+Entrevista" alt="Imagem representando uma entrevista" class="rounded-lg shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                 <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 3</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">CLASSIFICAÇÃO GERAL DAS ENTREVISTAS (I)</h2>
+                <ul class="list-none text-gray-700 space-y-4 text-lg">
+                    <li><span class="font-semibold">As entrevistas são consideradas conversas com finalidade.</span></li>
+                    <li><span class="font-semibold">Classificadas pela forma de organização:</span>
+                        <ul class="mt-2 pl-6 text-gray-600 space-y-2 relative list-sub">
+                            <li><span class="font-medium">(a) Sondagem de opinião:</span> Utiliza questionário totalmente estruturado; a escolha do informante é condicionada a dar respostas às perguntas formuladas.</li>
+                            <li><span class="font-medium">(b) Entrevista semi-estruturada:</span> Combina perguntas fechadas e abertas, permitindo ao entrevistado discorrer sobre o tema.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 4</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">CLASSIFICAÇÃO GERAL DAS ENTREVISTAS (II)</h2>
+                 <ul class="list-none text-gray-700 space-y-3 text-lg">
+                    <li><span class="font-medium">(c) Entrevista aberta ou em profundidade:</span> Informante é convidado a falar livremente sobre um tema, buscando maior profundidade nas reflexões.</li>
+                     <li class="relative pl-6 list-sub"><span class="font-medium">(d) Entrevista focalizada:</span> Destina-se a esclarecer um problema determinado.</li>
+                     <li class="relative pl-6 list-sub"><span class="font-medium">(e) Entrevista projetiva:</span> Utiliza dispositivos visuais (filmes, vídeos, fotos) ou narrativas ("histórias de vida," "etnobiografias") para convidar o entrevistado a discorrer sobre o que viu ou leu.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 5</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">NATUREZA DA INFORMAÇÃO OBTIDA</h2>
+                <ul class="list-none text-gray-700 space-y-4 text-lg">
+                    <li>A entrevista fornece dados secundários e primários.</li>
+                    <li><span class="font-semibold">(a) Fatos 'objetivos' ou 'concretos':</span> Dados que o pesquisador poderia obter por meio de outras fontes (censos, estatísticas, registros civis).</li>
+                    <li><span class="font-semibold">(b) Informações 'subjetivas':</span> Referem-se diretamente à reflexão do próprio sujeito sobre a realidade.
+                        <ul class="mt-2 pl-6 text-gray-600 space-y-2 relative list-sub">
+                            <li>Constituem ideias, crenças, maneiras de pensar, opiniões, sentimentos e projetos para o futuro.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 6</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">CONSIDERAÇÕES PRÁTICAS: ENTRADA NO CAMPO</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>A entrevista é uma forma privilegiada de interação social, sujeita à dinâmica das relações na sociedade.</li>
+                    <li>O investigador deve incorporar o contexto de produção da fala analisada.</li>
+                    <li><span class="font-semibold">Aspectos cruciais para a entrada em campo:</span>
+                         <ul class="mt-2 pl-6 text-gray-600 space-y-2 relative list-sub">
+                            <li><span class="font-medium">Apresentação do mediador:</span> Uma pessoa de confiança deve fazer a mediação entre o pesquisador e os interlocutores (sobretudo em grupos conflituosos).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 7</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">CONSIDERAÇÕES PRÁTICAS: INTERAÇÃO INICIAL</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li><span class="font-semibold">Menção do interesse da pesquisa:</span> Explicar resumidamente o trabalho e como o depoimento contribuirá.</li>
+                    <li><span class="font-semibold">Apresentação de credencial institucional:</span> Carta introdutória ou termo de adesão, sobretudo em pesquisas em equipe.</li>
+                    <li><span class="font-semibold">Explicação dos motivos:</span> Usar linguagem de senso comum para explicar os objetivos, respeitando os códigos das ciências sociais.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 8</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">ÉTICA E CONVERSA INICIAL</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li><span class="font-semibold">Garantia de anonimato e sigilo:</span> Assegurar que não se trata de entrevista de mídia e que a contribuição será usada para o conjunto do trabalho.</li>
+                    <li><span class="font-semibold">Justificativa da escolha:</span> Mostrar ao entrevistado por que e para que foi selecionado.</li>
+                    <li><span class="font-semibold">Conversa inicial (aquecimento):</span> Visa quebrar o gelo, perceber a disponibilidade do entrevistado e criar um clima descontraído.</li>
+                </ul>
+            </div>
+            
+            <!-- Slide 9 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 9</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">ENTREVISTA NÃO ESTRUTURADA (Aberta ou Não Diretiva)</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>Definida como "conversa com finalidade".</li>
+                    <li>Utiliza um roteiro invisível (não rígido) que serve de orientação.</li>
+                    <li>O pesquisador trabalha com um esquema de pensamento, buscando os fios relevantes para o aprofundamento.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 10 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">OBJETIVOS DA ENTREVISTA NÃO ESTRUTURADA</h2>
+                <ul class="list-none text-gray-700 space-y-3 text-lg">
+                    <li>A informalidade e o relacionamento livre permitem:
+                        <ul class="mt-2 pl-6 text-gray-600 space-y-2">
+                            <li>(a) A descrição do caso individual.</li>
+                            <li>(b) A compreensão das especificidades culturais mais profundas dos grupos.</li>
+                            <li>(c) A comparabilidade de diversos casos.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 11 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 11</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">VANTAGEM QUALITATIVA</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>O entrevistador se liberta de formulações fixadas.</li>
+                    <li>Os assuntos não obedecem a uma sequência rígida, mas sim às preocupações e ênfases do entrevistado.</li>
+                    <li>A quantidade de material produzido é superior, e o grau de profundidade é incomparável ao de questionários.</li>
+                    <li>A aproximação qualitativa permite atingir regiões inacessíveis à simples pergunta e resposta.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 12 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 12</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">A PROFUNDIDADE NA ENTREVISTA</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li><span class="font-semibold">Michelat (1975):</span> O material mais importante enriquece a análise, alcança níveis profundos, e o domínio afetivo e da experiência é mais determinante que o racional.</li>
+                    <li>A forma não estruturada permite emergir e ressaltar os níveis sócio-efe-tivo-existenciais.</li>
+                    <li>É crucial compreender os aspectos subjetivos ("Sem intropatia é difícil compreender os aspectos subjetivos da definição da situação do entrevistado").</li>
+                </ul>
+            </div>
+
+            <!-- Slide 13 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 13</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">ENTREVISTA SEMI-ESTRUTURADA</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>Difere da não estruturada apenas no grau.</li>
+                    <li>Obedece a um roteiro apropriado e utilizado pelo pesquisador.</li>
+                    <li>A entrevista semi-aberta é um apoio para o pesquisador, facilitando a abordagem.</li>
+                    <li><span class="font-semibold text-red-600">Cuidado:</span> Pesquisadores pouco experientes correm o risco de focar apenas nos temas pré-estabelecidos.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 14 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 14</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">ENTREVISTA FECHADA OU QUESTIONÁRIO</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>Questionários são instrumentos válidos e rigorosos para a captação e articulação de dados.</li>
+                    <li>Na pesquisa qualitativa, o questionário tem um lugar de complementaridade.</li>
+                    <li>A abordagem qualitativa foca na intensidade vivencial; os estudos quantitativos, na mensuração dos fenômenos.</li>
+                </ul>
+            </div>
+            
+            <!-- Slide 15 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 15</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">TÉCNICA DELPHI</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>Visa o consenso por meio da comunicação escrita.</li>
+                    <li>O investigador envia questionários/roteiros a um conjunto de especialistas.</li>
+                    <li>Busca conhecer a opinião do grupo sobre um problema (dimensão, definição de objetivos, prioridades e solução).</li>
+                    <li>As contribuições são levadas em conta, e o processo se repete até o consenso.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 16 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 16</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">PESQUISA EM GRUPO</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>Técnicas mais comuns: Grupo Focal e Brainstorming (chuva de ideias).</li>
+                    <li>Ambas são utilizadas na pesquisa qualitativa, seja combinadas com entrevistas, seja como estratégias exclusivas.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 17 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 17</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">GRUPO FOCAL (Focus Group)</h2>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 mt-4">
+                    <div class="md:w-1/2">
+                        <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                            <li>Constitui-se em um tipo de entrevista ou conversa em grupos pequenos e homogêneos.</li>
+                            <li><span class="font-semibold">Objetivos:</span> Obter informações, aprofundar a interação, gerar consenso e explicitar divergências.</li>
+                            <li>Requer um roteiro do geral ao específico, sob a coordenação de um moderador.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/400x300/e2e8f0/4a5568?text=Imagem+de+Grupo+Focal" alt="Imagem representando uma discussão em grupo focal" class="rounded-lg shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 18</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">FUNÇÕES E USO DO GRUPO FOCAL</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li><span class="font-semibold">Valor principal:</span> Formar opiniões e atitudes na interação.</li>
+                    <li>O uso dos grupos focais contrasta com a aplicação de questionários/entrevistas em que a opinião é emitida individualmente.</li>
+                    <li>Podem complementar a observação participante e entrevistas.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 19 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 19</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">USOS ESPECÍFICOS DO GRUPO FOCAL</h2>
+                <ul class="list-none text-gray-700 space-y-3 text-lg">
+                    <li>São usados para:
+                        <ul class="mt-2 pl-6 text-gray-600 space-y-2">
+                            <li>(a) Focalizar a pesquisa e formular questões precisas.</li>
+                            <li>(b) Complementar informações sobre conhecimentos peculiares de um grupo.</li>
+                            <li>(c) Desenvolver hipóteses para estudos complementares.</li>
+                            <li>(d) Usados como técnica exclusiva.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 20 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 20</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">CONDUÇÃO DO GRUPO FOCAL</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>Reúne pequeno número de informantes (seis a doze).</li>
+                    <li>Exige a presença de um animador e de um relator.</li>
+                    <li>O animador deve focar o tema, promover a participação e aprofundar a discussão.</li>
+                    <li><span class="font-semibold">Duração:</span> Geralmente, não deve ultrapassar uma hora e meia.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 21 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 21</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">BRAINSTORMING (Chuva de Ideias)</h2>
+                <div class="flex flex-col md:flex-row items-center gap-6 mt-4">
+                    <div class="md:w-1/2">
+                        <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                            <li>Técnica de grupo voltada para gerar novas informações e promover o pensamento criativo.</li>
+                            <li>O processo interativo em grupo não estruturado é mais eficiente do que o trabalho individual.</li>
+                            <li><span class="font-semibold">Utilidade:</span> Definir um tema, diagnosticar um problema, buscar obstáculos e soluções.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/400x300/e2e8f0/4a5568?text=Imagem+de+Brainstorming" alt="Imagem representando uma sessão de brainstorming com post-its" class="rounded-lg shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 22 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 22</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">PAPÉIS NO BRAINSTORMING</h2>
+                <ul class="list-none text-gray-700 space-y-3 text-lg">
+                    <li>Três papéis principais: coordenador, relator e membros.
+                        <ul class="mt-2 pl-6 text-gray-600 space-y-2 relative list-sub">
+                            <li><span class="font-medium">Coordenador:</span> Prepara a reunião, nomeia o problema e conduz o processo.</li>
+                            <li><span class="font-medium">Relator:</span> Auxilia o coordenador, focado no processo criativo.</li>
+                            <li><span class="font-medium">Membros:</span> Devem ser compatíveis com o objetivo, limitados a no máximo cinco pessoas.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 23 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 23</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">REGISTRO DA ENTREVISTA</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>A matéria-prima é a fala, e seu registro é crucial.</li>
+                    <li>Instrumento mais usual para garantir a fidedignidade é a <span class="font-semibold">gravação</span>.</li>
+                    <li>Quando não for possível, registrar a fala imediatamente após a entrevista.</li>
+                    <li>Não se deve confiar na memória, pois a lógica do pesquisador se infiltra na observação.</li>
+                </ul>
+            </div>
+            
+            <!-- Slide 24 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 24</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">OBSERVAÇÃO PARTICIPANTE (OP)</h2>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 mt-4">
+                    <div class="md:w-1/2">
+                        <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                            <li>Pode ser considerada parte essencial do trabalho de campo na pesquisa qualitativa.</li>
+                            <li>É tanto uma estratégia quanto um método em si para a compreensão da realidade.</li>
+                            <li>Definida como um processo em que o observador mantém a presença numa situação social com a finalidade de realizar uma investigação científica.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/400x300/e2e8f0/4a5568?text=Imagem+de+Observação" alt="Imagem representando observação participante" class="rounded-lg shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 25 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 25</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">POSTURA DO OBSERVADOR</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>O observador é parte do contexto sob observação e é modificado por ele.</li>
+                    <li>No trabalho qualitativo, a convivência com os interlocutores é uma virtude, não um inconveniente.</li>
+                    <li>É preciso sentir a marginalidade, a solidão e a saudade, e "cruzar os caminhos da empatia e da humildade".</li>
+                </ul>
+            </div>
+            
+            <!-- Slide 26 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 26</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">OS QUATRO PAPÉIS DO OBSERVADOR (Gold, 1958)</h2>
+                <ul class="list-none text-gray-700 space-y-4 text-lg">
+                    <li><span class="font-semibold">Os papéis não se realizam puramente; servem para fins analíticos.</span>
+                        <ul class="mt-2 pl-6 text-gray-600 space-y-2 relative list-sub">
+                            <li><span class="font-medium">Participante Total:</span> Envolve-se inteiramente, "como nativo". Traz risco de absorção definitiva pelo objeto.</li>
+                            <li><span class="font-medium">Observador-como-Participante:</span> Adquire papel diferente, mas restringe sua relação ao tempo da pesquisa (adoção de hábitos, etc.).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 27 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 27</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">OS QUATRO PAPÉIS DO OBSERVADOR (Cont.)</h2>
+                <ul class="list-none text-gray-700 space-y-4 text-lg">
+                     <li>
+                        <ul class="pl-6 text-gray-600 space-y-3 relative list-sub">
+                           <li><span class="font-medium">Participante-como-Observador:</span> Utilizado como estratégia complementar às entrevistas, foca em momentos importantes. É uma observação formal.</li>
+                           <li><span class="font-medium">Observador-Total:</span> Não comunica aos grupos que está observando e não se envolve. É uma estratégia raramente usada de forma pura.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 28 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 28</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">FASES CRUCIAIS DO TRABALHO DE CAMPO</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>A observação participante é um processo construído duplamente.</li>
+                    <li><span class="font-semibold">Primeiro momento: Entrada no campo:</span> Fazer contatos com as pessoas que controlam a comunidade.
+                        <ul class="mt-2 pl-6 text-gray-600 space-y-2 relative list-sub">
+                           <li>Pode-se usar a técnica "bola de neve," na qual um interlocutor vai apresentando outros.</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-semibold">Segundo momento: Inserção:</span> Definição do papel do pesquisador no interior do grupo.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 29 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 29</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">REFLEXÃO SOBRE O CAMPO (Malinowski)</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                    <li>Malinowski (1978) propõe um método para apreender a "totalidade funcional".</li>
+                    <li>O etnógrafo deve imergir na realidade, dominar teoria e colocar-se do ponto de vista do grupo.</li>
+                    <li>É essencial: ter abertura, sensibilidade para a lógica e cultura do grupo.</li>
+                    <li>Malinowski via o etnógrafo como um caçador ativo, sempre entre teoria e campo.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 30 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">SLIDE 30</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">DIÁRIO DE CAMPO E CONCLUSÃO</h2>
+                <div class="flex flex-col md:flex-row items-center gap-6 mt-4">
+                    <div class="md:w-1/2">
+                        <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                            <li><span class="font-semibold">Diário de Campo:</span> Instrumento tradicionalmente utilizado na observação participante.</li>
+                            <li>É um caderno de notas onde o investigador anota, dia a dia, tudo que observa.</li>
+                            <li>Deve conter impressões pessoais, resultados de conversas informais, e observações de comportamentos.</li>
+                            <li>O acervo de impressões e notas é crucial para tornar a pesquisa mais verdadeira.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/400x300/e2e8f0/4a5568?text=Imagem+de+Diário+de+Campo" alt="Imagem de um diário de campo com anotações" class="rounded-lg shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Navegação e Contador -->
+        <footer class="mt-6 flex items-center justify-between w-full max-w-4xl mx-auto">
+            <button id="prevBtn" class="bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                Anterior
+            </button>
+            <div id="slide-counter" class="text-center text-gray-700 font-medium">
+                Slide 1 de 30
+            </div>
+            <button id="nextBtn" class="bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-colors">
+                Próximo
+            </button>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                // Oculta todos os slides
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                });
+                
+                // Mostra o slide correto
+                if (slides[index]) {
+                    slides[index].classList.add('active');
+                }
+
+                // Atualiza o contador
+                slideCounter.textContent = `Slide ${index + 1} de ${totalSlides}`;
+                
+                // Atualiza o estado dos botões
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            // Navegação com as setas do teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextBtn.click();
+                } else if (e.key === 'ArrowLeft') {
+                    prevBtn.click();
+                }
+            });
+
+            // Inicializa a apresentação
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
+
