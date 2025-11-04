@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Técnicas de Pesquisa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
+
+    <div class="w-full max-w-7xl">
+        <main id="quiz-container" class="bg-white rounded-lg shadow-xl p-6 sm:p-8 md:p-12 min-h-[450px] md:min-h-[500px] flex flex-col justify-center relative overflow-hidden">
+            
+            <!-- Slide Introdução -->
+            <div class="slide active">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ - INTRODUÇÃO</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Prepare-se para o Quiz</h2>
+                <div class="max-w-3xl mx-auto text-gray-700 text-lg space-y-3">
+                    <p>Você responderá 10 perguntas de múltipla escolha sobre os temas apresentados.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Clique em uma alternativa para ver se está correta.</li>
+                        <li>Use os botões Anterior/Próximo ou as setas do teclado para navegar.</li>
+                        <li>Respostas corretas ficam em verde; incorretas, em vermelho.</li>
+                        <li>Você pode mudar sua resposta a qualquer momento.</li>
+                    </ul>
+                    <div class="mt-6 flex justify-center">
+                        <div class="bg-indigo-50 rounded-lg p-4">
+                            <p class="text-center font-semibold">Sua pontuação: <span id="current-score" class="text-2xl text-indigo-600">0/10</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-center">
+                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 px-4 py-2 text-sm font-medium">
+                            Boa sorte!
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz 1 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 1/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Qual das alternativas caracteriza a entrevista semi-estruturada?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">a) Não utiliza roteiro e é totalmente livre.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">b) Combina perguntas fechadas e abertas, com roteiro flexível.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">c) Utiliza apenas perguntas fechadas e respostas padronizadas.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 2 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 2/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">O que é fundamental garantir ao entrevistado segundo a ética da pesquisa?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">a) Anonimato e sigilo das informações.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">b) Participação em grupo focal.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">c) Responder apenas perguntas fechadas.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 3 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 3/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Qual técnica busca consenso entre especialistas por meio de rodadas de questionários?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">a) Observação participante</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">b) Técnica Delphi</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">c) Brainstorming</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 4 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 4/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">De acordo com o texto, qual tipo de entrevista utiliza dispositivos visuais como filmes, fotos ou poesias para que o entrevistado discorra sobre o que vê ou lê, sendo útil para abordar assuntos difíceis?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">A. Entrevista focalizada</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">B. Entrevista semi-estruturada</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">C. Entrevista projetiva</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">D. Sondagem de opinião</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 5 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 5/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">No contexto das práticas para a entrada do entrevistador em campo, o que o texto descreve como "aquecimento"?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">A. A mediação feita por uma pessoa de confiança para introduzir o pesquisador.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">B. A conversa inicial que visa quebrar o gelo e criar um clima descontraído.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">C. A apresentação de credenciais institucionais e um termo de adesão.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">D. A explicação dos motivos da pesquisa em linguagem de senso comum.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 6 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 6/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Qual é o principal objetivo da proposta dos "núcleos de significação", conforme apresentada pelos autores?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">A. Quantificar as categorias gramaticais presentes no discurso do informante.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">B. Apreender os sentidos presentes no discurso, buscando ir além da aparência e da descrição dos fatos.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">C. Realizar uma análise meramente descritiva do material empírico, focando nos fatos imediatos.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">D. Elaborar uma crítica radical das visões históricas, ignorando as categorias de mediação.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 7 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 7/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">O processo de análise de material discursivo, visando à apreensão dos sentidos pela proposta dos núcleos de significação, é dividido em três etapas sequenciais principais. Quais são elas?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">A. Leitura flutuante, Aglutinação de Temas e Análise Intranúcleo.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">B. Significados, Sentidos Subjetivos e Mediações Sociais.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">C. Pré-indicadores, Indicadores e Núcleos de Significação.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">D. Entrevistas Consistentes, Relatos Escritos e Autoconfrontação.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 8 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 8/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Na perspectiva da Psicologia Sócio-Histórica (Vigotski), como se diferencia a categoria sentido da categoria significado?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">A. O significado é inesgotável e contextualizado, enquanto o sentido é fixo e dicionarizado.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">B. O sentido está no campo semântico (conceito), e o significado está no campo psicológico (generalização).</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">C. O significado é a articulação dos eventos psicológicos do sujeito, e o sentido refere-se aos conteúdos mais fixos e compartilhados.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">D. O sentido é muito mais amplo que o significado, pois se refere às necessidades que mobilizam o sujeito (instável e singular), enquanto o significado é mais estável e socialmente compartilhado.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 9 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 9/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Na fase inicial da análise do material transcrito, após a leitura flutuante, são destacados os pré-indicadores. Qual característica define esse tipo de conteúdo nas falas?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">A. São apenas palavras isoladas que não carregam significado.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">B. São os resultados finais da articulação dialética dos indicadores.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">C. São trechos de fala que se destacam por serem reiterativos, demonstrarem maior carga emocional ou apresentarem ambivalências/contradições.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">D. São frases de efeito utilizadas pelo pesquisador para nomear a essência do discurso.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Quiz 10 -->
+            <div class="slide">
+                <p class="text-sm font-semibold text-indigo-600 mb-2 text-center">QUIZ 10/10</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Qual categoria metodológica, fundamental para a perspectiva da Psicologia Sócio-Histórica adotada, permite romper as dicotomias como interno/externo e objetivo/subjetivo, sendo entendida como um elemento que viabiliza a concretude de outro processo?</h2>
+                <ul class="space-y-3 text-lg">
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">A. Historicidade.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">B. Totalidade.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="true">C. Mediação.</button></li>
+                    <li><button class="quiz-option w-full text-left bg-gray-100 rounded p-3 hover:bg-indigo-100" data-correct="false">D. Aparência.</button></li>
+                </ul>
+                <div class="quiz-feedback mt-4 font-semibold"></div>
+            </div>
+
+            <!-- Slide Final -->
+            <div class="slide">
+                <div class="flex flex-col items-center justify-center text-center space-y-6">
+                    <div class="text-6xl">🎉</div>
+                    <h2 class="text-4xl font-bold text-gray-900">Parabéns!</h2>
+                    <p class="text-xl text-gray-700">Você concluiu o quiz</p>
+                    <div class="bg-indigo-50 rounded-lg p-6 max-w-md">
+                        <p class="text-lg text-gray-700 mb-2">Seu desempenho final:</p>
+                        <p class="text-5xl font-bold text-indigo-600" id="quiz-score">0/10</p>
+                        <p class="text-sm text-gray-600 mt-2">respostas corretas</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="pesquisa2.html" class="bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-gray-700 transition-colors">
+                            Voltar à Apresentação
+                        </a>
+                        <button onclick="location.reload()" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-colors">
+                            Refazer Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="mt-6 flex items-center justify-between w-full max-w-4xl mx-auto">
+            <button id="prevBtn" class="bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                Anterior
+            </button>
+            <div class="text-center">
+                <p id="slide-counter" class="text-gray-600 font-medium"></p>
+            </div>
+            <button id="nextBtn" class="bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-colors">
+                Próximo
+            </button>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            let quizAnswers = {};
+            const totalQuizQuestions = 10;
+
+            function showSlide(index) {
+                slides.forEach((slide) => {
+                    slide.classList.remove('active');
+                });
+                
+                if (slides[index]) {
+                    slides[index].classList.add('active');
+                }
+
+                if (slideCounter) {
+                    slideCounter.textContent = `Questão ${Math.max(1, index)} de ${totalSlides - 1}`;
+                }
+                
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+                
+                updateQuizScore();
+            }
+
+            function updateQuizScore() {
+                const correctAnswers = Object.values(quizAnswers).filter(answer => answer === true).length;
+                const scoreElements = [document.getElementById('quiz-score'), document.getElementById('current-score')];
+                
+                scoreElements.forEach(scoreElement => {
+                    if (scoreElement) {
+                        scoreElement.textContent = `${correctAnswers}/${totalQuizQuestions}`;
+                        
+                        scoreElement.classList.remove('text-red-600', 'text-yellow-600', 'text-green-600', 'text-indigo-600');
+                        if (correctAnswers < 5) {
+                            scoreElement.classList.add('text-red-600');
+                        } else if (correctAnswers < 8) {
+                            scoreElement.classList.add('text-yellow-600');
+                        } else {
+                            scoreElement.classList.add('text-green-600');
+                        }
+                    }
+                });
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextBtn.click();
+                } else if (e.key === 'ArrowLeft') {
+                    prevBtn.click();
+                }
+            });
+
+            document.querySelectorAll('.quiz-option').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const parent = btn.closest('.slide');
+                    const feedback = parent.querySelector('.quiz-feedback');
+                    const slideIndex = Array.from(slides).indexOf(parent);
+                    
+                    parent.querySelectorAll('.quiz-option').forEach(b => {
+                        b.classList.remove('bg-green-200', 'bg-red-200', 'border-2', 'border-green-500', 'border-red-500');
+                    });
+                    
+                    const isCorrect = btn.dataset.correct === "true";
+                    
+                    if (isCorrect) {
+                        btn.classList.add('bg-green-200', 'border-2', 'border-green-500');
+                        feedback.textContent = "✅ Correto! Excelente!";
+                        feedback.classList.add('text-green-700', 'text-lg');
+                        feedback.classList.remove('text-red-700');
+                        
+                        quizAnswers[slideIndex] = true;
+                    } else {
+                        btn.classList.add('bg-red-200', 'border-2', 'border-red-500');
+                        feedback.textContent = "❌ Incorreto. A resposta correta está destacada em verde.";
+                        feedback.classList.add('text-red-700', 'text-lg');
+                        feedback.classList.remove('text-green-700');
+                        
+                        quizAnswers[slideIndex] = false;
+                        
+                        parent.querySelectorAll('.quiz-option').forEach(option => {
+                            if (option.dataset.correct === "true") {
+                                option.classList.add('bg-green-200', 'border-2', 'border-green-500');
+                            }
+                        });
+                    }
+                    
+                    updateQuizScore();
+                    
+                    feedback.style.opacity = '0';
+                    feedback.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        feedback.style.transition = 'all 0.3s ease';
+                        feedback.style.opacity = '1';
+                        feedback.style.transform = 'translateY(0)';
+                    }, 50);
+                });
+            });
+
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
